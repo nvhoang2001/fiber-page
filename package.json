@@ -8,8 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "start:sign": "webpack serve --config webpack.signup-dev.js --open",
     "build:sign": "webpack --config webpack.signup-prod.js",
-    "style:sign": "node-sass --output-style expanded src/styles/signUp-style.scss dist/styles/signup-main.css",
-    "style" : "node-sass --output-style expanded src/styles/style.scss dist/styles/style.css"
+    "style:sign": "node-sass --watch src/styles/signUp-style.scss dist/styles/signup-main.css",
+    "style" : "node-sass --watch src/styles/style.scss dist/styles/style.css"
   },
   "author": "",
   "license": "ISC",
