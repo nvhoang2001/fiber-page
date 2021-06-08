@@ -1,0 +1,96 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+.invite {
+	margin: $mobile-section-padding;
+	padding: map-get($map: $invite-size, $key: padding);
+
+	background-color: map-get($map: $invite, $key: background);
+	border-radius: 2rem;
+
+	color: map-get($map: $invite, $key: font-color);
+
+	&__img {
+		height: 100vw;
+		background-image: url("../../../Assets/Page\ Image.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+
+		position: relative;
+		bottom: -3rem;
+
+		img {
+			display: none;
+		}
+	}
+
+	&__header {
+		margin: 2rem 0;
+	}
+
+	p {
+		font-size: 2rem;
+		width: 77%;
+		line-height: 1.25;
+	}
+
+	&__btn {
+		margin: 2rem 0;
+		width: 100%;
+		padding: 2rem;
+		border-radius: 1rem;
+		color: $btn-color;
+		font-weight: 800;
+		background-color: map-get($map: $invite, $key: font-color);
+	}
+}
+
+@media screen and (min-width: $big-size) {
+	.invite {
+		padding: map-get($map: $invite-size, $key: desktop-padding);
+		display: flex;
+		justify-content: space-between;
+		border-radius: 0.5rem;
+		&__content,
+		&__img {
+			width: 50%;
+		}
+
+		&__img {
+			height: auto;
+			background: none;
+			bottom: -2rem;
+
+			img {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__content {
+			align-self: center;
+		}
+
+		&__header {
+			margin: 1rem 0;
+			font-size: 1.65rem;
+		}
+
+		p {
+			font-size: 0.65rem;
+		}
+
+		&__btn {
+			margin: 1rem 0;
+			padding: 0.75rem 1.25rem;
+			width: fit-content;
+
+			border-radius: 0.5rem;
+		}
+	}
+}

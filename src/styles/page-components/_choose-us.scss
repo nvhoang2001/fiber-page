@@ -1,0 +1,73 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+%choose-font {
+	font-size: map-get($map: $choose-us-size, $key: mobile-font);
+}
+
+.choose-us {
+	margin: 7rem 0;
+	padding: $mobile-section-padding;
+
+	&__ques {
+		margin: 1.5rem 0;
+		font-weight: 900;
+		color: map-get($map: $choose-us, $key: question);
+		@extend %choose-font;
+	}
+
+	&__reas {
+		margin: 4rem 0;
+
+		p {
+			color: map-get($map: $choose-us, $key: res-font-color);
+			@extend %choose-font;
+		}
+	}
+
+	&__fig {
+		// margin-bottom: 1.5rem;
+
+		&__title {
+			margin: 1.5rem 0;
+			@extend %choose-font;
+		}
+	}
+}
+
+@media screen and (min-width: $big-size) {
+	%font-desktop-size {
+		font-size: map-get($map: $choose-us-size, $key: text-font);
+	}
+
+	.choose-us {
+		&__ques {
+			font-size: map-get($map: $choose-us-size, $key: desktop-font);
+		}
+
+		&__header {
+			width: 70%;
+		}
+
+		&__reas {
+			width: 30%;
+			margin: 2rem 0;
+
+			p {
+				@extend %font-desktop-size;
+			}
+		}
+
+		&__fig {
+			&__title {
+				margin: 1rem 0;
+				@extend %font-desktop-size;
+			}
+		}
+
+		&__list {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

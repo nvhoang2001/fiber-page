@@ -1,0 +1,49 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+input[type="radio"] {
+	appearance: radio;
+	-moz-appearance: radio;
+	-webkit-appearance: radio;
+}
+
+.aside {
+	display: none;
+
+	@media screen and (min-width: 900px) {
+		padding: 12.5%;
+		display: block;
+		background-color: map-get($map: $link, $key: color);
+		color: map-get($map: $aside, $key: font-color);
+
+		&__illus {
+			height: 40%;
+			width: 100%;
+			margin: 0.5rem 0;
+		}
+
+		figcaption {
+			text-align: center;
+		}
+
+		&__title {
+			margin: 0.5rem 0;
+		}
+
+		&__desc {
+			line-height: 1.5;
+			margin: 0 auto;
+			width: 85%;
+		}
+
+		&__dots {
+			display: flex;
+
+			justify-content: center;
+
+			> li {
+				margin: 0 0.25rem;
+			}
+		}
+	}
+}

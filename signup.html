@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="dist/styles/signup-main.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <main class="sign-up">
+                <header class="sign-up__header">
+                    <h4>Fiber</h4>
+                </header>
+                <section class="sign-up__form">
+                    <h2 class="sign-up__title">Create your Fiber account</h2>
+                    <form action="/" method="post">
+                        <label for="username">
+                            <p><b>Your name:</b></p>
+                            <input class="sign-up__input" type="text" name="username" id="username" placeholder="John Doe">
+                        </label>
+                        <br>
+                        <label for="user-email">
+                            <p><b>E-mail:</b></p>
+                            <input class="sign-up__input" type="email" name="useremail" id="useremail" placeholder="john@example.com">
+                        </label>
+                        <br>
+                        <label for="password">
+                            <p><b>Password:</b></p>
+                            <input class="sign-up__input" type="password" name="password" id="password" placeholder="At least 8 characters">
+                            <svg title="Show password">
+                                <use xlink:href="Assets/hide password.svg#hide"></use>
+                            </svg>
+                        </label>
+                        <br>
+                        <label for="agree">
+                            <input class="sign-up__checkbox" type="checkbox" name="agree" id="agree">
+                            <span>By creating an account on Fiber, you agree to the <a class="sign-up__link" href="#">Terms &
+                                    Conditions.</a></span>
+                        </label>
+                        <br>
+                        <button type="submit" class="sign-up__btn">Create Fiber account</button>
+                    </form>
+                    <p class="sign-in">Already has an account? <a href="#">Sign in</a></p>
+                </section>
+            </main>
+
+            <aside class="aside">
+                <figure>
+                    <img src="Assets/Sign Up Image.png" class="aside__illus" alt>
+                    <figcaption>
+                        <h2 class="aside__title">Unparalleled Templates</h2>
+                        <p class="aside__desc">Crafted by a team of professional designers, our templates are eunparalleled in the market.</p>
+
+                        <ul class="aside__dots">
+                            <li><input name="cur-img" type="radio" id="img-1"></li>
+                            <li><input name="cur-img" type="radio" id="img-2"></li>
+                            <li><input name="cur-img" type="radio" id="img-3"></li>
+                            <li><input name="cur-img" type="radio" id="img-4"></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </aside>
+    </div>
+    </body>
+
+</html>

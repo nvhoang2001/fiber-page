@@ -1,0 +1,61 @@
+// Sign in page
+$input: (
+	boder-color: rgba(180, 180, 180, 0.75),
+);
+
+$link: (
+	color: hsl(212, 100%, 50%),
+);
+
+$btn: (
+	hover-color: hsl(177, 97%, 35%),
+	box-boder-hover: hsl(224, 100%, 20%),
+);
+
+$aside: (
+	font-color: #ffffff,
+);
+
+// Homepage
+$mobile-nav: (
+	background: rgb(255, 255, 255),
+	boder: hsl(0, 2%, 30%),
+	modal-background: hsla(0, 0%, 40%, 0.7),
+	hover-link: hsla(0, 0%, 50%, 0.5),
+);
+
+$desktop-nav: (
+	boder-color: hsl(207, 100%, 50%),
+);
+
+$btn-color: #3f40d8;
+
+$welcome: (
+	font-color: rgb(102, 102, 102),
+	btn-color: #3f40d8,
+	btn-hover: hsl(240, 66%, 45%),
+);
+
+$header-color: hsl(41, 60%, 100%);
+
+$choose-us: (
+	question: #3f40d8,
+	res-font-color: rgb(102, 102, 102),
+);
+
+$invite: (
+	background: $btn-color,
+	font-color: white,
+);
+
+$review: (
+	border: rgba(192, 192, 192, 0.75),
+	user-name: #3f40d8,
+	btn-color: #3f40d8,
+	btn-background: white,
+);
+
+$footer: (
+	font-color: rgb(102, 102, 102),
+	hover-link: black,
+);

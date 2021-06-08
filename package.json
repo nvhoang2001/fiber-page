@@ -1,0 +1,35 @@
+{
+  "name": "fiber-page",
+  "version": "1.0.0",
+  "description": "A simple web page",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "start:sign": "webpack serve --config webpack.signup-dev.js --open",
+    "build:sign": "webpack --config webpack.signup-prod.js",
+    "style:sign": "node-sass --output-style expanded src/styles/signUp-style.scss dist/styles/signup-main.css",
+    "style" : "node-sass --output-style expanded src/styles/style.scss dist/styles/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "^5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0"
+  }
+}

@@ -1,0 +1,14 @@
+@import "./reset-css.scss";
+@import "./components/colors";
+@import "./components/global";
+@import "./sign-up-components/sign-up-form";
+@import "./sign-up-components/sign-up-aside";
+
+.container {
+	min-height: 100vh;
+	@media screen and (min-width: 900px) {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}

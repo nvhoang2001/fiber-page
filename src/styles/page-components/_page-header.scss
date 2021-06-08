@@ -1,0 +1,147 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+%mobile-navigator {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+.header {
+	padding: 5rem 3.5rem;
+
+	display: flex;
+	justify-content: space-between;
+
+	#header__nav--toggle {
+		display: none;
+	}
+
+	&__hamberger-menu {
+		cursor: pointer;
+	}
+
+	#header__nav--toggle:checked ~ .hide-menu {
+		left: 0;
+		display: inline-block;
+	}
+
+	&__mobile-links {
+		@extend %mobile-navigator;
+		width: 30rem;
+		left: -100%;
+		z-index: 2;
+
+		> .header__logo {
+			margin: 5rem 2rem;
+		}
+
+		border-right: 0.15rem solid map-get($map: $mobile-nav, $key: boder);
+		background-color: map-get($map: $mobile-nav, $key: background);
+	}
+
+	&__link > a {
+		display: inline-block;
+		width: 100%;
+		padding: 1.15rem 1rem 1.15rem 2rem;
+
+		text-decoration: none;
+		color: inherit;
+		&:hover {
+			background-color: map-get($map: $mobile-nav, $key: hover-link);
+			cursor: pointer;
+		}
+	}
+
+	.trans-modal {
+		@extend %mobile-navigator;
+		z-index: 1;
+		width: 100vw;
+		display: none;
+		background-color: map-get($map: $mobile-nav, $key: modal-background);
+	}
+}
+
+.desktop-nav {
+	display: none;
+}
+
+@media screen and (min-width: $big-size) {
+	.header {
+		padding: 0 2rem;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+
+		&__logo {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__header {
+			font-size: 1.15rem;
+		}
+
+		&__links {
+			display: flex;
+		}
+
+		&__link {
+			margin: 0.5rem;
+
+			> a {
+				padding: 0.5rem;
+				text-align: center;
+				border-bottom: 0.15rem solid transparent;
+
+				transition-property: border;
+				transition-duration: 1s;
+				transition-timing-function: ease;
+
+				&:hover {
+					background: none;
+					border-bottom-color: map-get($map: $desktop-nav, $key: boder-color);
+				}
+			}
+		}
+
+		&__link.sign-in,
+		&__link.sign-up {
+			margin: 0.25;
+			> a {
+				font-weight: 600;
+
+				padding: 0.5rem 1rem;
+			}
+		}
+
+		&__link.sign-up {
+			> a {
+				background-color: blue;
+				border: none;
+				color: white;
+
+				&:hover {
+					background-color: hsl(182, 73%, 50%);
+				}
+			}
+		}
+	}
+
+	.mobile-nav {
+		display: none;
+	}
+
+	.desktop-nav {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			font-size: 0.75rem;
+		}
+	}
+}

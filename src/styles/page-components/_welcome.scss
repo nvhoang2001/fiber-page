@@ -1,0 +1,145 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+%welcome-template {
+	width: 100%;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 2rem;
+	margin: 1rem 0;
+	text-align: center;
+}
+
+.welcome {
+	&__image {
+		position: relative;
+		top: -4rem;
+
+		z-index: 0;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__content {
+		padding: $mobile-section-padding;
+	}
+
+	&__title {
+		font-size: $mobile-section-header;
+		margin-bottom: 1.5rem;
+	}
+
+	&__des {
+		p,
+		li {
+			color: map-get($map: $welcome, $key: font-color);
+			font-size: 2.5rem;
+		}
+	}
+
+	&__btn {
+		@extend %welcome-template;
+		color: white;
+
+		border-radius: 0.25rem;
+		background-color: map-get($map: $welcome, $key: btn-color);
+
+		&:hover {
+			background-color: map-get($map: $welcome, $key: btn-hover);
+		}
+	}
+
+	&__link {
+		@extend %welcome-template;
+		display: inline-block;
+	}
+
+	&__item {
+		margin: 0.5rem 0;
+		padding-left: 4rem;
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 0.15rem;
+			left: 0;
+			content: " ";
+			display: block;
+			height: 2rem;
+			width: 2rem;
+			background-image: url(../../../Assets/Checkmark.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
+
+@media screen and (min-width: $big-size) {
+	%desktop-template {
+		width: 45%;
+		font-size: 0.65rem;
+		padding: 1rem;
+		margin: 1rem 0;
+	}
+
+	.welcome {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+
+		&__image {
+			width: 50%;
+			position: static;
+			z-index: 0;
+		}
+
+		&__content {
+			width: 50%;
+		}
+
+		&__title {
+			font-size: $desktop-section-header;
+		}
+
+		&__des {
+			p,
+			li,
+			button,
+			a {
+				font-size: 0.65rem;
+			}
+		}
+
+		&__trial {
+			display: flex;
+		}
+
+		&__btn {
+			@extend %desktop-template;
+			margin-right: 0.5rem;
+		}
+
+		&__link {
+			@extend %desktop-template;
+			margin-left: 0.5rem;
+		}
+
+		&__list {
+			display: flex;
+			width: 90%;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		&__item {
+			padding-left: 1.25rem;
+			&::before {
+				top: 0;
+				height: 0.65rem;
+				width: 0.65rem;
+			}
+		}
+	}
+}

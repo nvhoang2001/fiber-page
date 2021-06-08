@@ -1,0 +1,84 @@
+@import "../components/_colors";
+@import "../components/_size";
+
+%review-border {
+	border: 0.25rem solid map-get($map: $review, $key: border);
+	border-radius: 0.65rem;
+}
+
+.reviews {
+	margin: 5rem nth($list: $mobile-section-padding, $n: 2);
+
+	&__review {
+		@extend %review-border;
+		margin: 1rem 0;
+		padding: map-get($map: $review-size, $key: padding);
+	}
+
+	&__avatar {
+		display: flex;
+
+		align-items: center;
+
+		&-img {
+			margin-right: 1rem;
+		}
+	}
+
+	&__name {
+		color: map-get($map: $review, $key: user-name);
+	}
+
+	&__comment {
+		line-height: 1.25;
+		margin: 1rem 0;
+	}
+
+	&__btn {
+		@extend %review-border;
+		padding: map-get($map: $review-size, $key: btn-padding);
+		width: 100%;
+		font-weight: 800;
+
+		background-color: map-get($map: $review, $key: btn-background);
+		color: map-get($map: $review, $key: btn-color);
+	}
+}
+
+@media screen and (min-width: $big-size) {
+	%desktop-review-border {
+		border: 0.1rem solid map-get($map: $review, $key: border);
+		border-radius: 0.25rem;
+	}
+
+	.reviews {
+		max-width: 30rem;
+		height: 10.45rem;
+		margin: 3rem auto;
+		position: relative;
+
+		overflow: hidden;
+
+		&__review {
+			@extend %desktop-review-border;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			padding: map-get($map: $review-size, $key: desktop-padding);
+
+			/* THIS creates the animation! */
+			transition: transform 1s;
+		}
+
+		&__btn {
+			@extend %desktop-review-border;
+			padding: map-get($map: $review-size, $key: btn-desktop-padding);
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+}
