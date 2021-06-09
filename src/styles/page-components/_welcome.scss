@@ -21,6 +21,13 @@
 			height: 100%;
 		}
 	}
+	&__ratings {
+		margin: 1rem 0;
+		&-des {
+			margin-left: 0.5rem;
+			display: inline-block;
+		}
+	}
 
 	&__content {
 		padding: $mobile-section-padding;
