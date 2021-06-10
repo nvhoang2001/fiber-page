@@ -99,10 +99,14 @@ label[for="password"] {
 		position: absolute;
 		top: 2.85rem;
 		right: 1rem;
-
+		fill: #a9a9a9;
 		&:hover {
 			cursor: pointer;
 		}
+	}
+
+	& + .showpass {
+		fill: #52badc;
 	}
 }
 

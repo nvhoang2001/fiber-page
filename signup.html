@@ -18,20 +18,23 @@
                 </header>
                 <section class="sign-up__form">
                     <h2 class="sign-up__title">Create your Fiber account</h2>
-                    <form action="/" method="post">
+                    <form action="/" method="post" id="form">
                         <label for="username">
                             <p><b>Your name:</b></p>
-                            <input class="sign-up__input" type="text" name="username" id="username" placeholder="John Doe">
+                            <input class="sign-up__input" type="text" name="username" id="username" required
+                                placeholder="John Doe">
                         </label>
                         <br>
                         <label for="user-email">
                             <p><b>E-mail:</b></p>
-                            <input class="sign-up__input" type="email" name="useremail" id="useremail" placeholder="john@example.com">
+                            <input class="sign-up__input" type="email" name="useremail" id="useremail" required
+                                placeholder="john@example.com">
                         </label>
                         <br>
                         <label for="password">
                             <p><b>Password:</b></p>
-                            <input class="sign-up__input" type="password" name="password" id="password" placeholder="At least 8 characters">
+                            <input class="sign-up__input" type="password" name="password" id="password" required
+                                placeholder="At least 8 characters">
                             <svg title="Show password">
                                 <use xlink:href="Assets/hide password.svg#hide"></use>
                             </svg>
@@ -39,7 +42,8 @@
                         <br>
                         <label for="agree">
                             <input class="sign-up__checkbox" type="checkbox" name="agree" id="agree">
-                            <span>By creating an account on Fiber, you agree to the <a class="sign-up__link" href="#">Terms &
+                            <span>By creating an account on Fiber, you agree to the <a class="sign-up__link"
+                                    href="#">Terms &
                                     Conditions.</a></span>
                         </label>
                         <br>
@@ -51,10 +55,12 @@
 
             <aside class="aside">
                 <figure>
-                    <img src="Assets/Sign Up Image-low.png" class="aside__illus lazy-img" alt data-src="Assets/Sign Up Image.png">
+                    <img src="Assets/Sign Up Image-low.png" class="aside__illus lazy-img" alt
+                        data-src="Assets/Sign Up Image.png">
                     <figcaption>
                         <h2 class="aside__title">Unparalleled Templates</h2>
-                        <p class="aside__desc">Crafted by a team of professional designers, our templates are eunparalleled in the market.</p>
+                        <p class="aside__desc">Crafted by a team of professional designers, our templates are
+                            eunparalleled in the market.</p>
 
                     </figcaption>
                 </figure>
@@ -65,7 +71,7 @@
                     <li><input name="cur-img" type="radio" id="img-4"></li>
                 </ul>
             </aside>
-    </div>
+        </div>
     </body>
 
 </html>

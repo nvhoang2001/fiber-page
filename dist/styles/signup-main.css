@@ -125,6 +125,9 @@ svg {
   height: 1.9em;
   fill: currentColor; }
 
+html {
+  scroll-behavior: smooth; }
+
 html,
 body {
   font-size: 2vw;
@@ -257,9 +260,12 @@ label[for="password"] {
   #password + svg {
     position: absolute;
     top: 2.85rem;
-    right: 1rem; }
+    right: 1rem;
+    fill: #a9a9a9; }
     #password + svg:hover {
       cursor: pointer; }
+  #password + .showpass {
+    fill: #52badc; }
 
 @media screen and (min-width: 900px) {
   .sign-up__input, .sign-up__checkbox {
